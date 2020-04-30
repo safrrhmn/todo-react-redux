@@ -8,8 +8,8 @@ import { connect } from "react-redux";
 const TodoList = ({ todos = [], onRemovePressed }) => (
   <div className="todo-wrapper">
     <NewTodoForm />
-    {todos.map((todo) => (
-      <TodoListItem todo={todo} onRemovePressed={onRemovePressed} />
+    {todos.map((todo, key) => (
+      <TodoListItem key={key} todo={todo} onRemovePressed={onRemovePressed} />
     ))}
   </div>
 );
